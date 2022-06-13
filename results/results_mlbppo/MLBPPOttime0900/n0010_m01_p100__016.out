@@ -1,0 +1,95 @@
+ifile	/scratch/csagturk/mlbppo_inst/n0010_m01_p100__016.inst
+prob	MLBPPO
+threads	1
+ttime	900
+instance: /scratch/csagturk/mlbppo_inst/n0010_m01_p100__016.inst
+	m=1, n=[10, 10], #pos=10
+MIP: [1;32minit CPLEX[0m
+CAN: [1;35mcreated 100 x_{ijk} variables[0m
+CAN: [1;35mcreated 20 y_{ij} variables[0m
+CAN: [1;35mcreated 100 p_{ijk} variables[0m
+MIP: [1;32mcreated decision variables[0m
+CAN: [1;35madded 10 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 0 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 10 capacity constraints[0m
+MIP: [1;32mcreated constraints[0m
+MIP: [1;32mcreated objective function[0m
+MIP: [1;32mcalling CPLEX solve ...[0m
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               900
+Tried aggregator 3 times.
+MIP Presolve eliminated 109 rows and 87 columns.
+MIP Presolve modified 173 coefficients.
+Aggregator did 64 substitutions.
+Reduced MIP has 48 rows, 59 columns, and 275 nonzeros.
+Reduced MIP has 59 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.98 ticks)
+Found incumbent of value 3312.000000 after 0.01 sec. (1.32 ticks)
+Probing fixed 8 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (0.13 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 12 rows and 8 columns.
+MIP Presolve modified 44 coefficients.
+Reduced MIP has 34 rows, 51 columns, and 159 nonzeros.
+Reduced MIP has 51 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.15 ticks)
+Probing time = 0.00 sec. (0.08 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 34 rows, 51 columns, and 159 nonzeros.
+Reduced MIP has 51 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.11 ticks)
+Probing time = 0.00 sec. (0.08 ticks)
+Clique table members: 148.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.10 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                         3312.0000        0.0000           100.00%
+      0     0     2731.3750    10     3312.0000     2731.3750       28   17.53%
+*     0+    0                         2948.0000     2731.3750             7.35%
+      0     0     2807.9800    15     2948.0000      Cuts: 18       46    4.75%
+      0     0        cutoff           2948.0000                     58    0.00%
+Elapsed time = 0.01 sec. (2.59 ticks, tree = 0.01 MB, solutions = 2)
+
+Clique cuts applied:  6
+Cover cuts applied:  2
+Implied bound cuts applied:  1
+Flow cuts applied:  1
+Mixed integer rounding cuts applied:  1
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    0.01 sec. (2.59 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.01 sec. (2.59 ticks)
+MIP: [1;32mCPLEX finished.[0m
+MIP: [1;32mCPLEX status: Optimal[0m
+CAN: [1;35mItem: 0, Level: 0, at bin: 8[0m
+CAN: [1;35mItem: 1, Level: 0, at bin: 8[0m
+CAN: [1;35mItem: 2, Level: 0, at bin: 4[0m
+CAN: [1;35mItem: 3, Level: 0, at bin: 3[0m
+CAN: [1;35mItem: 4, Level: 0, at bin: 5[0m
+CAN: [1;35mItem: 5, Level: 0, at bin: 1[0m
+CAN: [1;35mItem: 6, Level: 0, at bin: 5[0m
+CAN: [1;35mItem: 7, Level: 0, at bin: 6[0m
+CAN: [1;35mItem: 8, Level: 0, at bin: 1[0m
+CAN: [1;35mItem: 9, Level: 0, at bin: 6[0m
+MIP: [1;32mSolution: 
+Indexes: [8, 8, 4, 3, 5, 1, 5, 6, 1, 6], P Variables: [8][8][4][3][5][1][5][6][1][6], Flow leaving each bin: [0m
+MIP: [1;32mObjective value: 2948[0m
+MIP: [1;32mLower Bound: 2948[0m
+MIP: [1;32mBranch-and-Bound nodes: 0[0m
+
+# best solution:
+best objective value:	2948
+best dual bound value:	2948
+optimality gap:	0%
+CPU time:	0.00912226

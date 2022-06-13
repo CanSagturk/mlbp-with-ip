@@ -1,0 +1,128 @@
+ifile	/scratch/csagturk/mlbppo_inst/n0010_m02_p100__047.inst
+prob	MLBPPO
+threads	1
+ttime	900
+instance: /scratch/csagturk/mlbppo_inst/n0010_m02_p100__047.inst
+	m=2, n=[10, 8, 6], #pos=10
+MIP: [1;32minit CPLEX[0m
+CAN: [1;35mcreated 128 x_{ijk} variables[0m
+CAN: [1;35mcreated 24 y_{ij} variables[0m
+CAN: [1;35mcreated 140 p_{ijk} variables[0m
+MIP: [1;32mcreated decision variables[0m
+CAN: [1;35madded 10 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 8 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 14 capacity constraints[0m
+MIP: [1;32mcreated constraints[0m
+MIP: [1;32mcreated objective function[0m
+MIP: [1;32mcalling CPLEX solve ...[0m
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               900
+Tried aggregator 3 times.
+MIP Presolve eliminated 435 rows and 406 columns.
+MIP Presolve added 2 rows and 0 columns.
+MIP Presolve modified 134 coefficients.
+Aggregator did 1127 substitutions.
+Reduced MIP has 1050 rows, 836 columns, and 2784 nonzeros.
+Reduced MIP has 507 binaries, 0 generals, 0 SOSs, and 8 indicators.
+Presolve time = 0.01 sec. (7.18 ticks)
+Found incumbent of value 8614.000000 after 0.02 sec. (12.47 ticks)
+Probing fixed 0 vars, tightened 9 bounds.
+Probing changed sense of 8 constraints.
+Probing time = 0.01 sec. (9.31 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 55 rows and 58 columns.
+Aggregator did 609 substitutions.
+Reduced MIP has 386 rows, 169 columns, and 1392 nonzeros.
+Reduced MIP has 169 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.89 ticks)
+Probing time = 0.00 sec. (0.42 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1 rows and 0 columns.
+Reduced MIP has 385 rows, 169 columns, and 1384 nonzeros.
+Reduced MIP has 169 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.88 ticks)
+Probing time = 0.00 sec. (0.42 ticks)
+Clique table members: 231.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (1.83 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                         8614.0000        0.0000           100.00%
+      0     0     4665.8674    45     8614.0000     4665.8674      122   45.83%
+      0     0     4966.2834    52     8614.0000      Cuts: 59      396   42.35%
+*     0+    0                         7620.0000     4966.2834            34.83%
+      0     0     5023.6681    53     7620.0000      Cuts: 61      516   34.07%
+      0     0     5026.5415    57     7620.0000      Cuts: 39      630   34.03%
+      0     0     5026.7615    63     7620.0000      Cuts: 41      686   34.03%
+*     0+    0                         6369.0000     5026.7615            21.07%
+      0     0     5027.3602    63     6369.0000      Cuts: 33      707   21.07%
+Detecting symmetries...
+      0     0     5032.5042    65     6369.0000      Cuts: 41      836   20.98%
+      0     0     5032.8016    70     6369.0000      Cuts: 24      872   20.98%
+      0     0     5033.2975    61     6369.0000      Cuts: 21      937   20.97%
+      0     0     5033.8727    71     6369.0000      Cuts: 23      968   20.96%
+      0     0     5034.4747    65     6369.0000      Cuts: 15      989   20.95%
+      0     0     5034.5331    73     6369.0000      Cuts: 18     1015   20.95%
+Detecting symmetries...
+      0     2     5034.5331    65     6369.0000     5034.5331     1015   20.95%
+Elapsed time = 0.11 sec. (104.09 ticks, tree = 0.01 MB, solutions = 3)
+*    30+   27                         5607.0000     5044.9440            10.02%
+*    30+   26                         5325.0000     5044.9440             5.26%
+*    33    27      integral     0     5260.0000     5044.9440     2678    4.09%
+*    50+   40                         5193.0000     5046.6934             2.82%
+*   220    64      integral     0     5184.0000     5089.1469    11001    1.83%
+    235    53        cutoff           5184.0000     5118.1208    11731    1.27%
+
+Clique cuts applied:  9
+Cover cuts applied:  19
+Implied bound cuts applied:  66
+Mixed integer rounding cuts applied:  14
+Zero-half cuts applied:  9
+Lift and project cuts applied:  1
+Gomory fractional cuts applied:  4
+
+Root node processing (before b&c):
+  Real time             =    0.11 sec. (104.24 ticks)
+Sequential b&c:
+  Real time             =    0.23 sec. (275.64 ticks)
+                          ------------
+Total (root+branch&cut) =    0.34 sec. (379.88 ticks)
+MIP: [1;32mCPLEX finished.[0m
+MIP: [1;32mCPLEX status: Optimal[0m
+CAN: [1;35mItem: 0, Level: 0, at bin: 0[0m
+CAN: [1;35mItem: 0, Level: 1, at bin: 2[0m
+CAN: [1;35mItem: 1, Level: 0, at bin: 3[0m
+CAN: [1;35mItem: 1, Level: 1, at bin: 5[0m
+CAN: [1;35mItem: 2, Level: 0, at bin: 5[0m
+CAN: [1;35mItem: 2, Level: 1, at bin: 5[0m
+CAN: [1;35mItem: 3, Level: 0, at bin: 2[0m
+CAN: [1;35mItem: 3, Level: 1, at bin: 3[0m
+CAN: [1;35mItem: 4, Level: 0, at bin: 1[0m
+CAN: [1;35mItem: 4, Level: 1, at bin: 3[0m
+CAN: [1;35mItem: 5, Level: 0, at bin: 5[0m
+CAN: [1;35mItem: 5, Level: 1, at bin: 5[0m
+CAN: [1;35mItem: 6, Level: 0, at bin: 0[0m
+CAN: [1;35mItem: 6, Level: 1, at bin: 2[0m
+CAN: [1;35mItem: 7, Level: 0, at bin: 5[0m
+CAN: [1;35mItem: 7, Level: 1, at bin: 5[0m
+CAN: [1;35mItem: 8, Level: 0, at bin: 3[0m
+CAN: [1;35mItem: 8, Level: 1, at bin: 5[0m
+CAN: [1;35mItem: 9, Level: 0, at bin: 2[0m
+CAN: [1;35mItem: 9, Level: 1, at bin: 3[0m
+MIP: [1;32mSolution: 
+Indexes: [0, 3, 5, 2, 1, 5, 0, 5, 3, 2][2, 3, 3, 5, -1, 5, -1, -1], P Variables: [0, 2][3, 5][5, 5][2, 3][1, 3][5, 5][0, 2][5, 5][3, 5][2, 3], Flow leaving each bin: [0m
+MIP: [1;32mObjective value: 5184[0m
+MIP: [1;32mLower Bound: 5184[0m
+MIP: [1;32mBranch-and-Bound nodes: 304[0m
+
+# best solution:
+best objective value:	5184
+best dual bound value:	5184
+optimality gap:	0%
+CPU time:	0.3348

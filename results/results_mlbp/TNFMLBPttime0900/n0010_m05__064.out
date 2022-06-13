@@ -1,0 +1,97 @@
+ifile	/scratch/csagturk/mlbp_inst/n0010_m05__064.inst
+prob	TNFMLBP
+threads	1
+ttime	900
+instance: /scratch/csagturk/mlbp_inst/n0010_m05__064.inst
+	m=5, n=[10, 6, 5, 5, 4, 4]
+MIP: [1;32minit CPLEX[0m
+CAN: [1;35mcreated 151 x_{ijk} and f_{ijk} variables[0m
+CAN: [1;35mcreated 34 y_{ij} variables[0m
+MIP: [1;32mcreated decision variables[0m
+MIP: [1;32mcreated constraints[0m
+MIP: [1;32mcreated objective function[0m
+MIP: [1;32mcalling CPLEX solve ...[0m
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               900
+Tried aggregator 5 times.
+MIP Presolve eliminated 11 rows and 140 columns.
+MIP Presolve modified 113 coefficients.
+Aggregator did 82 substitutions.
+Reduced MIP has 173 rows, 304 columns, and 606 nonzeros.
+Reduced MIP has 245 binaries, 0 generals, 0 SOSs, and 19 indicators.
+Presolve time = 0.00 sec. (2.16 ticks)
+Found incumbent of value 29271.000000 after 0.01 sec. (4.62 ticks)
+Probing fixed 0 vars, tightened 23 bounds.
+Probing changed sense of 22 constraints.
+Probing time = 0.00 sec. (0.56 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 121 rows and 140 columns.
+Reduced MIP has 52 rows, 164 columns, and 324 nonzeros.
+Reduced MIP has 164 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.44 ticks)
+Probing time = 0.00 sec. (0.14 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 52 rows, 164 columns, and 324 nonzeros.
+Reduced MIP has 164 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.28 ticks)
+Probing time = 0.00 sec. (0.13 ticks)
+Clique table members: 117.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.44 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                        29271.0000        0.0000           100.00%
+      0     0     8512.3887    20    29271.0000     8512.3887       82   70.92%
+*     0+    0                        17835.0000     8512.3887            52.27%
+      0     0     9229.3167    35    17835.0000      Cuts: 33      117   48.25%
+*     0+    0                        15694.0000     9229.3167            41.19%
+      0     0     9279.8088    33    15694.0000      Cuts: 16      139   40.87%
+      0     0     9297.5558    32    15694.0000      Cuts: 12      155   40.76%
+      0     0     9300.1977    33    15694.0000      Cuts: 16      171   40.74%
+      0     0     9301.6704    49    15694.0000      Cuts: 12      192   40.73%
+      0     0     9362.1544    40    15694.0000      Cuts: 19      213   40.35%
+      0     0     9389.5280    42    15694.0000      Cuts: 12      239   40.17%
+      0     0     9392.6603    59    15694.0000      Cuts: 13      269   40.15%
+      0     0     9392.6603    59    15694.0000      Cuts: 13      289   40.15%
+      0     0     9392.6603    44    15694.0000       Cuts: 9      316   40.15%
+      0     0     9392.6603    53    15694.0000      Cuts: 14      346   40.15%
+*     0+    0                        14754.0000     9392.6603            36.34%
+*     0+    0                        13498.0000     9392.6603            30.41%
+      0     0  -1.00000e+75     0    13498.0000     9392.6603      346   30.41%
+      0     2     9392.6603    48    13498.0000     9404.8000      346   30.32%
+Elapsed time = 0.04 sec. (20.42 ticks, tree = 0.01 MB, solutions = 5)
+*    20+   12                        13216.0000     9436.0160            28.60%
+*   297     7      integral     0     9982.0000     9828.4747     2613    1.54%
+
+Clique cuts applied:  5
+Cover cuts applied:  32
+Flow cuts applied:  2
+Mixed integer rounding cuts applied:  8
+Zero-half cuts applied:  2
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    0.04 sec. (20.44 ticks)
+Sequential b&c:
+  Real time             =    0.04 sec. (32.99 ticks)
+                          ------------
+Total (root+branch&cut) =    0.08 sec. (53.43 ticks)
+MIP: [1;32mCPLEX finished.[0m
+MIP: [1;32mCPLEX status: Optimal[0m
+MIP: [1;32mSolution: 
+[4, 4, 2, 5, 3, 2, 3, 3, 5, 2][-1, -1, 2, 0, 0, 2][2, -1, 0, -1, -1][1, -1, 1, -1, -1][-1, 1, -1, -1][0m
+MIP: [1;32mObjective value: 9982[0m
+MIP: [1;32mLower Bound: 9982[0m
+MIP: [1;32mBranch-and-Bound nodes: 314[0m
+
+# best solution:
+best objective value:	9982
+best dual bound value:	9982
+optimality gap:	0%
+CPU time:	0.0752589

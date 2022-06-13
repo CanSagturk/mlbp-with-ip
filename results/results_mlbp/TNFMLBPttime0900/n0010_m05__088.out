@@ -1,0 +1,104 @@
+ifile	/scratch/csagturk/mlbp_inst/n0010_m05__088.inst
+prob	TNFMLBP
+threads	1
+ttime	900
+instance: /scratch/csagturk/mlbp_inst/n0010_m05__088.inst
+	m=5, n=[10, 8, 9, 6, 5, 5]
+MIP: [1;32minit CPLEX[0m
+CAN: [1;35mcreated 261 x_{ijk} and f_{ijk} variables[0m
+CAN: [1;35mcreated 43 y_{ij} variables[0m
+MIP: [1;32mcreated decision variables[0m
+MIP: [1;32mcreated constraints[0m
+MIP: [1;32mcreated objective function[0m
+MIP: [1;32mcalling CPLEX solve ...[0m
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               900
+Tried aggregator 5 times.
+MIP Presolve eliminated 11 rows and 275 columns.
+MIP Presolve modified 160 coefficients.
+Aggregator did 112 substitutions.
+Reduced MIP has 239 rows, 448 columns, and 891 nonzeros.
+Reduced MIP has 364 binaries, 0 generals, 0 SOSs, and 28 indicators.
+Presolve time = 0.00 sec. (3.53 ticks)
+Found incumbent of value 32520.000000 after 0.01 sec. (5.05 ticks)
+Probing fixed 0 vars, tightened 33 bounds.
+Probing changed sense of 28 constraints.
+Probing time = 0.00 sec. (0.91 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 168 rows and 196 columns.
+Reduced MIP has 71 rows, 252 columns, and 499 nonzeros.
+Reduced MIP has 252 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.68 ticks)
+Probing time = 0.00 sec. (0.23 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 71 rows, 252 columns, and 499 nonzeros.
+Reduced MIP has 252 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.44 ticks)
+Probing time = 0.00 sec. (0.23 ticks)
+Clique table members: 148.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.80 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                        32520.0000        0.0000           100.00%
+      0     0     9373.8922    20    32520.0000     9373.8922      132   71.17%
+      0     0    10126.5590    40    32520.0000      Cuts: 41      188   68.86%
+*     0+    0                        15957.0000    10126.5590            36.54%
+      0     0    10231.5308    39    15957.0000      Cuts: 32      223   35.88%
+*     0+    0                        15531.0000    10231.5308            34.12%
+      0     0    10328.0757    55    15531.0000      Cuts: 18      271   33.50%
+      0     0    10423.9692    41    15531.0000      Cuts: 11      325   32.88%
+      0     0    10492.5069    42    15531.0000      Cuts: 12      340   32.44%
+      0     0    10600.5745    49    15531.0000      Cuts: 18      371   31.75%
+      0     0    10777.4462    65    15531.0000      Cuts: 13      394   30.61%
+      0     0    10795.8347    52    15531.0000       Cuts: 7      410   30.49%
+      0     0    10903.1365    59    15531.0000      Cuts: 11      418   29.80%
+      0     0    10903.3194    69    15531.0000       Cuts: 6      423   29.80%
+      0     0    10913.3670    63    15531.0000       Cuts: 3      431   29.73%
+      0     0    10915.1412    67    15531.0000       Cuts: 8      440   29.72%
+      0     0    10915.1412    68    15531.0000   ZeroHalf: 3      446   29.72%
+*     0+    0                        15441.0000    10915.1412            29.31%
+*     0+    0                        15141.0000    10915.1412            27.91%
+      0     0  -1.00000e+75     0    15141.0000    10915.1412      446   27.91%
+      0     2    10915.1412    57    15141.0000    10915.1412      446   27.91%
+Elapsed time = 0.05 sec. (33.29 ticks, tree = 0.01 MB, solutions = 5)
+*    30+   24                        14051.0000    10915.1412            22.32%
+*   168   102      integral     0    13926.0000    10965.7398     2095   21.26%
+*   190+  107                        13102.0000    10965.9075            16.30%
+*   460+  234                        13056.0000    11234.0674            13.95%
+*   560+  273                        12982.0000    11296.5437            12.98%
+*   696   338      integral     0    12915.0000    11360.4169     6350   12.04%
+   1378   406        cutoff          12915.0000    11799.2093    13133    8.64%
+
+Clique cuts applied:  5
+Cover cuts applied:  47
+Flow cuts applied:  5
+Mixed integer rounding cuts applied:  23
+Zero-half cuts applied:  13
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    0.05 sec. (33.35 ticks)
+Sequential b&c:
+  Real time             =    0.37 sec. (344.22 ticks)
+                          ------------
+Total (root+branch&cut) =    0.42 sec. (377.57 ticks)
+MIP: [1;32mCPLEX finished.[0m
+MIP: [1;32mCPLEX status: Optimal[0m
+MIP: [1;32mSolution: 
+[0, 6, 7, 5, 7, 2, 5, 6, 5, 3][5, -1, 8, 1, -1, 5, 8, 3][-1, 4, -1, 5, -1, 4, -1, -1, 5][-1, -1, -1, -1, 1, 2][-1, 1, 1, -1, -1][0m
+MIP: [1;32mObjective value: 12915[0m
+MIP: [1;32mLower Bound: 12915[0m
+MIP: [1;32mBranch-and-Bound nodes: 2272[0m
+
+# best solution:
+best objective value:	12915
+best dual bound value:	12915
+optimality gap:	0%
+CPU time:	0.421962

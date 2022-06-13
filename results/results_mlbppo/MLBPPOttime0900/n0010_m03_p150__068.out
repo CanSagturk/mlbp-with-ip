@@ -1,0 +1,141 @@
+ifile	/scratch/csagturk/mlbppo_inst/n0010_m03_p150__068.inst
+prob	MLBPPO
+threads	1
+ttime	900
+instance: /scratch/csagturk/mlbppo_inst/n0010_m03_p150__068.inst
+	m=3, n=[10, 9, 11, 10], #pos=15
+MIP: [1;32minit CPLEX[0m
+CAN: [1;35mcreated 299 x_{ijk} variables[0m
+CAN: [1;35mcreated 40 y_{ij} variables[0m
+CAN: [1;35mcreated 300 p_{ijk} variables[0m
+MIP: [1;32mcreated decision variables[0m
+CAN: [1;35madded 10 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 20 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 30 capacity constraints[0m
+MIP: [1;32mcreated constraints[0m
+MIP: [1;32mcreated objective function[0m
+MIP: [1;32mcalling CPLEX solve ...[0m
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               900
+Tried aggregator 2 times.
+MIP Presolve eliminated 2111 rows and 1709 columns.
+MIP Presolve modified 367 coefficients.
+Aggregator did 4340 substitutions.
+Reduced MIP has 4207 rows, 3192 columns, and 11225 nonzeros.
+Reduced MIP has 1835 binaries, 0 generals, 0 SOSs, and 27 indicators.
+Presolve time = 0.03 sec. (36.13 ticks)
+Probing fixed 0 vars, tightened 32 bounds.
+Probing changed sense of 20 constraints.
+Probing time = 0.13 sec. (124.52 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 120 rows and 140 columns.
+Aggregator did 2594 substitutions.
+Reduced MIP has 1493 rows, 458 columns, and 5757 nonzeros.
+Reduced MIP has 458 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (11.85 ticks)
+Probing time = 0.00 sec. (2.48 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 1493 rows, 458 columns, and 5757 nonzeros.
+Reduced MIP has 458 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (3.44 ticks)
+Probing time = 0.00 sec. (2.51 ticks)
+Clique table members: 1242.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.01 sec. (6.29 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     5716.1118    67                   5716.1118      214         
+      0     0     6129.0671    78                    Cuts: 74      418         
+      0     0     6246.1881    91                    Cuts: 85      567         
+      0     0     6360.0103    94                    Cuts: 65      709         
+      0     0     6408.5533    94                    Cuts: 26      780         
+      0     0     6432.7019    93                    Cuts: 39      840         
+Detecting symmetries...
+      0     0     6443.1514    89                    Cuts: 30      893         
+      0     0     6497.9760   105                    Cuts: 34      933         
+      0     0     6502.3676    88                    Cuts: 48      980         
+      0     0     6546.0780    94                    Cuts: 19     1015         
+*     0+    0                         9653.0000     6546.0780            32.19%
+      0     0     6553.2010    98     9653.0000      Cuts: 20     1036   32.11%
+      0     0     6556.1961    97     9653.0000      Cuts: 23     1056   32.08%
+      0     0     6556.5650   106     9653.0000      Cuts: 18     1077   32.08%
+      0     0     6556.5650   103     9653.0000       Cuts: 4     1085   32.08%
+*     0+    0                         9097.0000     6556.5650            27.93%
+      0     0  -1.00000e+75     0     9097.0000     6556.5650     1085   27.93%
+Detecting symmetries...
+      0     2     6556.5650    95     9097.0000     6560.9297     1085   27.88%
+Elapsed time = 0.42 sec. (416.41 ticks, tree = 0.01 MB, solutions = 2)
+*    40+   40                         7392.0000     6571.9275            11.09%
+*    40+   26                         6904.0000     6571.9275             4.81%
+    163    97     6578.4974    75     6904.0000     6574.5381     5655    4.77%
+*   295   148      integral     0     6828.0000     6575.3646     9040    3.70%
+    355   171     6596.4409    92     6828.0000     6575.7542    10705    3.69%
+    499   239     6740.4276    87     6828.0000     6582.4753    15266    3.60%
+    675   320     6606.8085    68     6828.0000     6588.5367    20160    3.51%
+    880   401     6796.2500    45     6828.0000     6593.2835    25342    3.44%
+   1044   449     6606.7907    93     6828.0000     6601.1239    29809    3.32%
+*  1050   115      integral     0     6619.0000     6601.1239    29987    0.27%
+
+Clique cuts applied:  6
+Cover cuts applied:  29
+Implied bound cuts applied:  42
+Flow cuts applied:  2
+Mixed integer rounding cuts applied:  14
+Zero-half cuts applied:  20
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    0.42 sec. (416.94 ticks)
+Sequential b&c:
+  Real time             =    1.08 sec. (1523.31 ticks)
+                          ------------
+Total (root+branch&cut) =    1.50 sec. (1940.25 ticks)
+MIP: [1;32mCPLEX finished.[0m
+MIP: [1;32mCPLEX status: Optimal[0m
+CAN: [1;35mItem: 0, Level: 0, at bin: 3[0m
+CAN: [1;35mItem: 0, Level: 1, at bin: 3[0m
+CAN: [1;35mItem: 0, Level: 2, at bin: 8[0m
+CAN: [1;35mItem: 1, Level: 0, at bin: 8[0m
+CAN: [1;35mItem: 1, Level: 1, at bin: 5[0m
+CAN: [1;35mItem: 1, Level: 2, at bin: 5[0m
+CAN: [1;35mItem: 2, Level: 0, at bin: 1[0m
+CAN: [1;35mItem: 2, Level: 1, at bin: 5[0m
+CAN: [1;35mItem: 2, Level: 2, at bin: 5[0m
+CAN: [1;35mItem: 3, Level: 0, at bin: 6[0m
+CAN: [1;35mItem: 3, Level: 1, at bin: 5[0m
+CAN: [1;35mItem: 3, Level: 2, at bin: 5[0m
+CAN: [1;35mItem: 4, Level: 0, at bin: 3[0m
+CAN: [1;35mItem: 4, Level: 1, at bin: 3[0m
+CAN: [1;35mItem: 4, Level: 2, at bin: 8[0m
+CAN: [1;35mItem: 5, Level: 0, at bin: 3[0m
+CAN: [1;35mItem: 5, Level: 1, at bin: 3[0m
+CAN: [1;35mItem: 5, Level: 2, at bin: 8[0m
+CAN: [1;35mItem: 6, Level: 0, at bin: 1[0m
+CAN: [1;35mItem: 6, Level: 1, at bin: 5[0m
+CAN: [1;35mItem: 6, Level: 2, at bin: 5[0m
+CAN: [1;35mItem: 7, Level: 0, at bin: 5[0m
+CAN: [1;35mItem: 7, Level: 1, at bin: 4[0m
+CAN: [1;35mItem: 7, Level: 2, at bin: 5[0m
+CAN: [1;35mItem: 8, Level: 0, at bin: 3[0m
+CAN: [1;35mItem: 8, Level: 1, at bin: 3[0m
+CAN: [1;35mItem: 8, Level: 2, at bin: 8[0m
+CAN: [1;35mItem: 9, Level: 0, at bin: 8[0m
+CAN: [1;35mItem: 9, Level: 1, at bin: 5[0m
+CAN: [1;35mItem: 9, Level: 2, at bin: 5[0m
+MIP: [1;32mSolution: 
+Indexes: [3, 8, 1, 6, 3, 3, 1, 5, 3, 8][-1, 5, -1, 3, -1, 4, 5, -1, 5][-1, -1, -1, 8, 5, 5, -1, -1, -1, -1, -1], P Variables: [3, 3, 8][8, 5, 5][1, 5, 5][6, 5, 5][3, 3, 8][3, 3, 8][1, 5, 5][5, 4, 5][3, 3, 8][8, 5, 5], Flow leaving each bin: [0m
+MIP: [1;32mObjective value: 6619[0m
+MIP: [1;32mLower Bound: 6619[0m
+MIP: [1;32mBranch-and-Bound nodes: 1183[0m
+
+# best solution:
+best objective value:	6619
+best dual bound value:	6619
+optimality gap:	0%
+CPU time:	1.53055

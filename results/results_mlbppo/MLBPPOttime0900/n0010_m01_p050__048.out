@@ -1,0 +1,94 @@
+ifile	/scratch/csagturk/mlbppo_inst/n0010_m01_p050__048.inst
+prob	MLBPPO
+threads	1
+ttime	900
+instance: /scratch/csagturk/mlbppo_inst/n0010_m01_p050__048.inst
+	m=1, n=[10, 7], #pos=5
+MIP: [1;32minit CPLEX[0m
+CAN: [1;35mcreated 70 x_{ijk} variables[0m
+CAN: [1;35mcreated 17 y_{ij} variables[0m
+CAN: [1;35mcreated 70 p_{ijk} variables[0m
+MIP: [1;32mcreated decision variables[0m
+CAN: [1;35madded 10 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 0 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 7 capacity constraints[0m
+MIP: [1;32mcreated constraints[0m
+MIP: [1;32mcreated objective function[0m
+MIP: [1;32mcalling CPLEX solve ...[0m
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               900
+Tried aggregator 2 times.
+MIP Presolve eliminated 30 rows and 27 columns.
+MIP Presolve modified 93 coefficients.
+Aggregator did 60 substitutions.
+Reduced MIP has 37 rows, 60 columns, and 240 nonzeros.
+Reduced MIP has 60 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.61 ticks)
+Found incumbent of value 3092.000000 after 0.01 sec. (0.85 ticks)
+Probing fixed 5 vars, tightened 0 bounds.
+Probing time = 0.00 sec. (0.13 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 3 rows and 5 columns.
+MIP Presolve modified 33 coefficients.
+Reduced MIP has 32 rows, 55 columns, and 185 nonzeros.
+Reduced MIP has 55 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.18 ticks)
+Probing time = 0.00 sec. (0.10 ticks)
+Clique table members: 168.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.11 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                         3092.0000        0.0000           100.00%
+      0     0     2438.3077     4     3092.0000     2438.3077       26   21.14%
+      0     0     2587.8750    10     3092.0000       Cuts: 9       39   16.30%
+*     0+    0                         2746.0000     2587.8750             5.76%
+      0     0     2668.0000    13     2746.0000      Cuts: 25       82    2.84%
+*     0+    0                         2692.0000     2668.0000             0.89%
+*     0     0      integral     0     2668.0000       Cuts: 7       86    0.00%
+      0     0        cutoff           2668.0000     2668.0000       86    0.00%
+Elapsed time = 0.02 sec. (3.12 ticks, tree = 0.01 MB, solutions = 4)
+
+GUB cover cuts applied:  2
+Clique cuts applied:  3
+Cover cuts applied:  1
+Implied bound cuts applied:  1
+Flow cuts applied:  1
+Zero-half cuts applied:  1
+Gomory fractional cuts applied:  2
+
+Root node processing (before b&c):
+  Real time             =    0.02 sec. (3.13 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.02 sec. (3.13 ticks)
+MIP: [1;32mCPLEX finished.[0m
+MIP: [1;32mCPLEX status: Optimal[0m
+CAN: [1;35mItem: 0, Level: 0, at bin: 3[0m
+CAN: [1;35mItem: 1, Level: 0, at bin: 4[0m
+CAN: [1;35mItem: 2, Level: 0, at bin: 1[0m
+CAN: [1;35mItem: 3, Level: 0, at bin: 1[0m
+CAN: [1;35mItem: 4, Level: 0, at bin: 6[0m
+CAN: [1;35mItem: 5, Level: 0, at bin: 4[0m
+CAN: [1;35mItem: 6, Level: 0, at bin: 5[0m
+CAN: [1;35mItem: 7, Level: 0, at bin: 0[0m
+CAN: [1;35mItem: 8, Level: 0, at bin: 5[0m
+CAN: [1;35mItem: 9, Level: 0, at bin: 4[0m
+MIP: [1;32mSolution: 
+Indexes: [3, 4, 1, 1, 6, 4, 5, 0, 5, 4], P Variables: [3][4][1][1][6][4][5][0][5][4], Flow leaving each bin: [0m
+MIP: [1;32mObjective value: 2668[0m
+MIP: [1;32mLower Bound: 2668[0m
+MIP: [1;32mBranch-and-Bound nodes: 0[0m
+
+# best solution:
+best objective value:	2668
+best dual bound value:	2668
+optimality gap:	0%
+CPU time:	0.0119357

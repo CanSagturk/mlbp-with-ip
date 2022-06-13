@@ -1,0 +1,110 @@
+ifile	/scratch/csagturk/mlbp_inst/n0040_m01__070.inst
+prob	MLBP
+threads	1
+ttime	900
+instance: /scratch/csagturk/mlbp_inst/n0040_m01__070.inst
+	m=1, n=[40, 20]
+MIP: [1;32minit CPLEX[0m
+CAN: [1;35mcreated 800 x_{ijk} variables[0m
+CAN: [1;35mcreated 60 y_{ij} variables[0m
+MIP: [1;32mcreated decision variables[0m
+CAN: [1;35madded 40 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 0 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 20 capacity constraints[0m
+MIP: [1;32mcreated constraints[0m
+MIP: [1;32mcreated objective function[0m
+MIP: [1;32mcalling CPLEX solve ...[0m
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               900
+Tried aggregator 1 time.
+MIP Presolve eliminated 0 rows and 63 columns.
+Reduced MIP has 60 rows, 757 columns, and 1494 nonzeros.
+Reduced MIP has 757 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.27 ticks)
+Found incumbent of value 10635.000000 after 0.00 sec. (3.30 ticks)
+Probing time = 0.00 sec. (1.63 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 60 rows, 757 columns, and 1494 nonzeros.
+Reduced MIP has 757 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.60 ticks)
+Probing time = 0.00 sec. (1.63 ticks)
+Clique table members: 405.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (1.12 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                        10635.0000        0.0000           100.00%
+      0     0     8752.3333    22    10635.0000     8752.3333      112   17.70%
+      0     0     8755.4762    28    10635.0000      Cuts: 44      181   17.67%
+*     0+    0                         9638.0000     8755.4762             9.16%
+      0     0     8755.4762    19     9638.0000      Cuts: 48      242    9.16%
+      0     0     8755.4762    41     9638.0000      Cuts: 26      332    9.16%
+      0     0     8755.4762    39     9638.0000      Cuts: 29      401    9.16%
+*     0+    0                         9191.0000     8755.4762             4.74%
+*     0+    0                         9111.0000     8755.4762             3.90%
+*     0+    0                         9100.0000     8755.4762             3.79%
+      0     0  -1.00000e+75     0     9100.0000     8755.4762      401    3.79%
+      0     2     8755.4762    15     9100.0000     8755.4762      401    3.79%
+Elapsed time = 0.19 sec. (125.30 ticks, tree = 0.01 MB, solutions = 5)
+*   140+  122                         9055.0000     8755.4762             3.31%
+*   240+  190                         8969.0000     8755.4762             2.38%
+    830   596     8780.0850    34     8969.0000     8755.4762     7778    2.38%
+
+Performing restart 1
+
+Repeating presolve.
+Tried aggregator 1 time.
+MIP Presolve eliminated 0 rows and 1 columns.
+Reduced MIP has 60 rows, 756 columns, and 1493 nonzeros.
+Reduced MIP has 756 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.24 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 60 rows, 756 columns, and 1493 nonzeros.
+Reduced MIP has 756 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.62 ticks)
+Represolve time = 0.01 sec. (8.00 ticks)
+   1025     0     8755.4762    68     8969.0000      Cuts: 49    10097    2.38%
+   1025     0     8791.3849    46     8969.0000      Cuts: 42    10189    1.98%
+   1025     0     8799.9114    34     8969.0000      Cuts: 57    10272    1.89%
+   1025     0     8802.0000    32     8969.0000      Cuts: 54    10355    1.86%
+   1025     0     8802.0000    31     8969.0000      Cuts: 64    10415    1.86%
+   1025     0     8817.4004    24     8969.0000      Cuts: 15    10478    1.69%
+   1025     0     8817.4004    37     8969.0000      Cuts: 40    10572    1.69%
+   1025     0     8817.4004    40     8969.0000      Cuts: 30    10644    1.69%
+*  1025+    0                         8876.0000     8817.4004             0.66%
+   1025     0  -1.00000e+75     0     8876.0000     8817.4004    10644    0.66%
+   1025     2     8817.4004    20     8876.0000     8818.6910    10644    0.65%
+
+Clique cuts applied:  4
+Cover cuts applied:  19
+Flow cuts applied:  3
+Mixed integer rounding cuts applied:  5
+Zero-half cuts applied:  6
+Lift and project cuts applied:  4
+Gomory fractional cuts applied:  8
+
+Root node processing (before b&c):
+  Real time             =    0.19 sec. (125.36 ticks)
+Sequential b&c:
+  Real time             =    0.71 sec. (831.57 ticks)
+                          ------------
+Total (root+branch&cut) =    0.90 sec. (956.93 ticks)
+MIP: [1;32mCPLEX finished.[0m
+MIP: [1;32mCPLEX status: Optimal[0m
+MIP: [1;32mSolution: 
+[9, 17, 3, 1, 8, 17, 0, 18, 18, 9, 17, 6, 16, 11, 6, 18, 12, 8, 4, 7, 15, 12, 7, 1, 7, 7, 11, 3, 6, 13, 13, 19, 19, 16, 9, 13, 11, 4, 12, 15][0m
+MIP: [1;32mObjective value: 8876[0m
+MIP: [1;32mLower Bound: 8876[0m
+MIP: [1;32mBranch-and-Bound nodes: 1063[0m
+
+# best solution:
+best objective value:	8876
+best dual bound value:	8876
+optimality gap:	0%
+CPU time:	0.840468

@@ -1,0 +1,84 @@
+ifile	/scratch/csagturk/mlbp_inst/n0050_m01__008.inst
+prob	MLBP
+threads	1
+ttime	900
+instance: /scratch/csagturk/mlbp_inst/n0050_m01__008.inst
+	m=1, n=[50, 26]
+MIP: [1;32minit CPLEX[0m
+CAN: [1;35mcreated 1300 x_{ijk} variables[0m
+CAN: [1;35mcreated 76 y_{ij} variables[0m
+MIP: [1;32mcreated decision variables[0m
+CAN: [1;35madded 50 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 0 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 26 capacity constraints[0m
+MIP: [1;32mcreated constraints[0m
+MIP: [1;32mcreated objective function[0m
+MIP: [1;32mcalling CPLEX solve ...[0m
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               900
+Tried aggregator 1 time.
+MIP Presolve eliminated 0 rows and 187 columns.
+Reduced MIP has 76 rows, 1139 columns, and 2252 nonzeros.
+Reduced MIP has 1139 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.94 ticks)
+Found incumbent of value 12787.000000 after 0.01 sec. (5.53 ticks)
+Probing time = 0.00 sec. (2.21 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 76 rows, 1139 columns, and 2252 nonzeros.
+Reduced MIP has 1139 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.50 ticks)
+Probing time = 0.00 sec. (2.21 ticks)
+Clique table members: 554.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (2.75 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                        12787.0000        0.0000           100.00%
+      0     0    11156.0000    32    12787.0000    11156.0000      232   12.76%
+      0     0    11156.0000    43    12787.0000      Cuts: 65      315   12.76%
+      0     0    11156.0000    48    12787.0000      Cuts: 36      443   12.76%
+*     0+    0                        12400.0000    11156.0000            10.03%
+      0     0  -1.00000e+75     0    12400.0000    11156.0000      443   10.03%
+      0     2    11156.0000    17    12400.0000    11156.0000      443   10.03%
+Elapsed time = 0.07 sec. (67.45 ticks, tree = 0.01 MB, solutions = 2)
+*    20+   20                        11754.0000    11156.0000             5.09%
+*   100+  100                        11738.0000    11156.0000             4.96%
+*   120+  118                        11509.0000    11156.0000             3.07%
+*   130+  124                        11472.0000    11156.0000             2.75%
+*   140+  134                        11456.0000    11156.0000             2.62%
+*   240+  198                        11438.0000    11156.0000             2.47%
+    644   510    11156.0000    31    11438.0000    11156.0000     6494    2.47%
+*   720+  564                        11422.0000    11156.0000             2.33%
+*  1050+    0                        11156.0000    11156.0000             0.00%
+
+Clique cuts applied:  6
+Cover cuts applied:  169
+Mixed integer rounding cuts applied:  2
+Zero-half cuts applied:  8
+Gomory fractional cuts applied:  3
+
+Root node processing (before b&c):
+  Real time             =    0.07 sec. (67.56 ticks)
+Sequential b&c:
+  Real time             =    0.46 sec. (532.87 ticks)
+                          ------------
+Total (root+branch&cut) =    0.53 sec. (600.43 ticks)
+MIP: [1;32mCPLEX finished.[0m
+MIP: [1;32mCPLEX status: Optimal[0m
+MIP: [1;32mSolution: 
+[13, 21, 25, 14, 10, 13, 17, 12, 19, 13, 11, 4, 6, 9, 23, 14, 18, 18, 16, 2, 5, 15, 9, 11, 6, 21, 10, 12, 23, 0, 19, 16, 14, 2, 11, 9, 0, 14, 25, 7, 17, 21, 12, 7, 4, 1, 1, 14, 5, 1][0m
+MIP: [1;32mObjective value: 11156[0m
+MIP: [1;32mLower Bound: 11156[0m
+MIP: [1;32mBranch-and-Bound nodes: 1050[0m
+
+# best solution:
+best objective value:	11156
+best dual bound value:	11156
+optimality gap:	0%
+CPU time:	0.515533

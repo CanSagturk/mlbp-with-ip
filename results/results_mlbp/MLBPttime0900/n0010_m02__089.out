@@ -1,0 +1,90 @@
+ifile	/scratch/csagturk/mlbp_inst/n0010_m02__089.inst
+prob	MLBP
+threads	1
+ttime	900
+instance: /scratch/csagturk/mlbp_inst/n0010_m02__089.inst
+	m=2, n=[10, 8, 8]
+MIP: [1;32minit CPLEX[0m
+CAN: [1;35mcreated 144 x_{ijk} variables[0m
+CAN: [1;35mcreated 26 y_{ij} variables[0m
+MIP: [1;32mcreated decision variables[0m
+CAN: [1;35madded 10 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 8 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 16 capacity constraints[0m
+MIP: [1;32mcreated constraints[0m
+MIP: [1;32mcreated objective function[0m
+MIP: [1;32mcalling CPLEX solve ...[0m
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               900
+Tried aggregator 2 times.
+MIP Presolve eliminated 0 rows and 31 columns.
+MIP Presolve modified 52 coefficients.
+Aggregator did 24 substitutions.
+Reduced MIP has 82 rows, 185 columns, and 362 nonzeros.
+Reduced MIP has 161 binaries, 0 generals, 0 SOSs, and 8 indicators.
+Presolve time = 0.00 sec. (0.62 ticks)
+Found incumbent of value 9713.000000 after 0.01 sec. (1.24 ticks)
+Probing fixed 0 vars, tightened 8 bounds.
+Probing changed sense of 8 constraints.
+Probing time = 0.00 sec. (0.33 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 48 rows and 56 columns.
+Reduced MIP has 34 rows, 129 columns, and 250 nonzeros.
+Reduced MIP has 129 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.33 ticks)
+Probing time = 0.00 sec. (0.12 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 34 rows, 129 columns, and 250 nonzeros.
+Reduced MIP has 129 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.22 ticks)
+Probing time = 0.00 sec. (0.12 ticks)
+Clique table members: 88.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.23 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                         9713.0000        0.0000           100.00%
+      0     0     4469.8485    15     9713.0000     4469.8485       49   53.98%
+*     0+    0                         4826.0000     4469.8485             7.38%
+      0     0     4488.7646    22     4826.0000      Cuts: 21       73    6.99%
+      0     0     4503.5308    31     4826.0000      Cuts: 25      110    6.68%
+      0     0     4509.0000    10     4826.0000      Cuts: 21      127    6.57%
+      0     0     4523.2733    39     4826.0000      Cuts: 11      151    6.27%
+      0     0     4550.3887    31     4826.0000      Cuts: 11      171    5.71%
+      0     0     4565.2972    30     4826.0000      Cuts: 11      204    5.40%
+      0     0     4565.9091    17     4826.0000      Cuts: 17      220    5.39%
+      0     0     4565.9091    19     4826.0000       Cuts: 9      239    5.39%
+      0     0     4565.9091    11     4826.0000       Cuts: 6      245    5.39%
+      0     2     4565.9091     7     4826.0000     4566.8889      245    5.37%
+Elapsed time = 0.03 sec. (11.43 ticks, tree = 0.01 MB, solutions = 2)
+
+Clique cuts applied:  5
+Cover cuts applied:  29
+Mixed integer rounding cuts applied:  6
+Zero-half cuts applied:  6
+
+Root node processing (before b&c):
+  Real time             =    0.03 sec. (11.44 ticks)
+Sequential b&c:
+  Real time             =    0.01 sec. (9.45 ticks)
+                          ------------
+Total (root+branch&cut) =    0.04 sec. (20.88 ticks)
+MIP: [1;32mCPLEX finished.[0m
+MIP: [1;32mCPLEX status: Optimal[0m
+MIP: [1;32mSolution: 
+[0, 4, 6, 7, 4, 5, 6, 0, 2, 7][7, -1, 6, -1, 7, 7, 7, 6][0m
+MIP: [1;32mObjective value: 4826[0m
+MIP: [1;32mLower Bound: 4826[0m
+MIP: [1;32mBranch-and-Bound nodes: 108[0m
+
+# best solution:
+best objective value:	4826
+best dual bound value:	4826
+optimality gap:	0%
+CPU time:	0.040402

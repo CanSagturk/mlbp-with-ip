@@ -1,0 +1,103 @@
+ifile	/scratch/csagturk/mlbppo_inst/n0030_m05_p050__097.inst
+prob	NFMLBPPO
+threads	1
+ttime	900
+instance: /scratch/csagturk/mlbppo_inst/n0030_m05_p050__097.inst
+	m=5, n=[30, 23, 19, 16, 17, 15], #pos=15
+MIP: [1;32minit CPLEX[0m
+CAN: [1;35mcreated 1958 x_{ijk} variables[0m
+CAN: [1;35mcreated 120 y_{ij} variables[0m
+CAN: [1;35mcreated 3600 f_{ijkh} variables[0m
+MIP: [1;32mcreated decision variables[0m
+CAN: [1;35madded 30 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 75 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 90 capacity constraints[0m
+MIP: [1;32mcreated constraints[0m
+MIP: [1;32mcreated objective function[0m
+MIP: [1;32mcalling CPLEX solve ...[0m
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               900
+Tried aggregator 2 times.
+MIP Presolve eliminated 15946 rows and 16461 columns.
+MIP Presolve modified 710 coefficients.
+Aggregator did 443 substitutions.
+Reduced MIP has 46191 rows, 45084 columns, and 163584 nonzeros.
+Reduced MIP has 44859 binaries, 0 generals, 0 SOSs, and 131 indicators.
+Presolve time = 0.24 sec. (227.00 ticks)
+Probing fixed 160 vars, tightened 150 bounds.
+Probing time = 4.54 sec. (4681.45 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1168 rows and 1203 columns.
+Reduced MIP has 45023 rows, 43881 columns, and 160339 nonzeros.
+Reduced MIP has 43881 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.23 sec. (205.60 ticks)
+Probing time = 0.03 sec. (17.56 ticks)
+Clique table members: 119389.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 13.04 sec. (14211.24 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0    24522.3988   879                  24522.3988    22447         
+      0     0    24940.7497   931                    Cuts: 96    45807         
+      0     0    25211.3327   916                   Cuts: 110    81299         
+      0     0    25371.8555  1194                   Cuts: 124   108849         
+      0     0    25449.7582   971                    Cuts: 85   153316         
+      0     0    25521.9713   790                    Cuts: 89   201892         
+      0     0    25572.6284   795                    Cuts: 84   227713         
+      0     0    25640.8433   874                    Cuts: 71   266152         
+      0     0    25675.8341  1071                   Cuts: 101   305728         
+      0     0    25723.4008   957                    Cuts: 62   333963         
+      0     0    25738.2328  1169                    Cuts: 72   365874         
+      0     0    25761.8182  1115                    Cuts: 51   396316         
+      0     0    25781.0254  1140                    Cuts: 57   427938         
+      0     0    25849.4107   998                    Cuts: 58   469094         
+      0     0    25862.5146   987                    Cuts: 60   494386         
+      0     0    25875.7075  1004                    Cuts: 43   532659         
+      0     0    25894.6996  1009                    Cuts: 68   567380         
+      0     0    25906.8315   900                    Cuts: 47   602481         
+      0     0    25917.6205  1024                    Cuts: 50   649374         
+      0     0    25920.6087   952                    Cuts: 40   689086         
+      0     0    25923.3499   922                    Cuts: 32   711620         
+      0     0    25924.7558  1028                    Cuts: 33   736777         
+      0     0    25925.9122   881                    Cuts: 30   745972         
+      0     0    25930.2162   931                    Cuts: 55   757578         
+Heuristic still looking.
+      0     2    25930.2162   847                  25931.4377   757578         
+Elapsed time = 775.08 sec. (727122.39 ticks, tree = 0.01 MB, solutions = 0)
+      1     3    25941.3109   786                  25931.4377   766174         
+      2     4    26000.5418   786                  25931.4377   779698         
+      3     5    25967.5369   851                  25931.4377   797008         
+      4     6    26002.2355   763                  25931.4377   805569         
+      5     7    26017.0588   846                  25931.4377   825110         
+      6     8    26053.1230   879                  25931.4377   849471         
+      7     9    26019.7934   912                  25931.4377   875312         
+      8    10    26050.0653   864                  25931.4377   887833         
+      9    11    26019.7934   971                  25931.4377   901646         
+     10    12    26019.7934   869                  25931.4377   913276         
+Elapsed time = 838.96 sec. (786864.85 ticks, tree = 0.21 MB, solutions = 0)
+     11    13    26164.0177   839                  25931.4377   932029         
+     12    14    26171.5847   827                  25931.4377   963515         
+     13    15    26191.8367   856                  25931.4377   985050         
+
+Clique cuts applied:  19
+Cover cuts applied:  37
+Flow cuts applied:  4
+Mixed integer rounding cuts applied:  137
+Zero-half cuts applied:  25
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =  771.53 sec. (724391.37 ticks)
+Sequential b&c:
+  Real time             =  128.49 sec. (122162.95 ticks)
+                          ------------
+Total (root+branch&cut) =  900.02 sec. (846554.33 ticks)
+MIP: [1;32mCPLEX finished.[0m
+MIP: [1;32mCPLEX status: Unknown[0m
+MIP: [1;32mNo feasible solution exits[0m

@@ -1,0 +1,186 @@
+ifile	/scratch/csagturk/mlbppo_inst/n0030_m05_p100__014.inst
+prob	NFMLBPPO
+threads	1
+ttime	900
+instance: /scratch/csagturk/mlbppo_inst/n0030_m05_p100__014.inst
+	m=5, n=[30, 19, 19, 22, 20, 21], #pos=30
+MIP: [1;32minit CPLEX[0m
+CAN: [1;35mcreated 2209 x_{ijk} variables[0m
+CAN: [1;35mcreated 131 y_{ij} variables[0m
+CAN: [1;35mcreated 3930 f_{ijkh} variables[0m
+MIP: [1;32mcreated decision variables[0m
+CAN: [1;35madded 30 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 80 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 101 capacity constraints[0m
+MIP: [1;32mcreated constraints[0m
+MIP: [1;32mcreated objective function[0m
+MIP: [1;32mcalling CPLEX solve ...[0m
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               900
+Tried aggregator 2 times.
+MIP Presolve eliminated 18833 rows and 19437 columns.
+MIP Presolve modified 1763 coefficients.
+Aggregator did 391 substitutions.
+Reduced MIP has 51669 rows, 50182 columns, and 193811 nonzeros.
+Reduced MIP has 49943 binaries, 0 generals, 0 SOSs, and 142 indicators.
+Presolve time = 0.31 sec. (285.53 ticks)
+Probing fixed 145 vars, tightened 157 bounds.
+Probing time = 5.52 sec. (5400.91 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1131 rows and 1175 columns.
+Reduced MIP has 50538 rows, 49007 columns, and 190699 nonzeros.
+Reduced MIP has 49007 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.27 sec. (232.02 ticks)
+Probing time = 0.03 sec. (18.61 ticks)
+Clique table members: 138256.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 10.96 sec. (10682.62 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0    20213.5425   699                  20213.5425    21577         
+      0     0    20523.5609   646                   Cuts: 126    43252         
+      0     0    20751.9133   867                   Cuts: 117    68136         
+      0     0    20912.8288   897                   Cuts: 101    85467         
+      0     0    21130.6465  1009                    Cuts: 90   110937         
+      0     0    21202.6181   831                    Cuts: 88   129971         
+      0     0    21253.6202   772                    Cuts: 50   143959         
+      0     0    21301.9080   880                    Cuts: 60   154673         
+      0     0    21347.5505   848                    Cuts: 64   171213         
+      0     0    21376.8704   996                    Cuts: 94   183427         
+      0     0    21395.9475   938                    Cuts: 39   210567         
+      0     0    21421.3319   790                    Cuts: 61   255791         
+      0     0    21452.8781   806                    Cuts: 64   293980         
+      0     0    21471.2292   823                    Cuts: 47   337169         
+      0     0    21486.2906   705                    Cuts: 67   366766         
+      0     0    21534.1513   658                    Cuts: 39   407906         
+      0     0    21546.2362   628                    Cuts: 42   448120         
+      0     0    21550.2203   657                    Cuts: 55   491689         
+      0     0    21563.1956   638                    Cuts: 72   521937         
+      0     0    21569.7020   524                    Cuts: 34   586235         
+      0     0    21570.2573   497                    Cuts: 27   624974         
+      0     0    21573.4796   776                    Cuts: 22   670952         
+      0     0    21575.5423   641                    Cuts: 30   685304         
+      0     0    21576.3358   537                    Cuts: 32   695511         
+      0     0    21576.3358   518                    Cuts: 34   703751         
+Heuristic still looking.
+Heuristic still looking.
+*     0+    0                        54305.0000    21576.3358            60.27%
+*     0+    0                        52334.0000    21576.3358            58.77%
+
+Clique cuts applied:  24
+Cover cuts applied:  28
+Flow cuts applied:  7
+Mixed integer rounding cuts applied:  101
+Zero-half cuts applied:  24
+
+Root node processing (before b&c):
+  Real time             =  899.25 sec. (760350.52 ticks)
+Sequential b&c:
+  Real time             =    0.76 sec. (483.90 ticks)
+                          ------------
+Total (root+branch&cut) =  900.00 sec. (760834.41 ticks)
+MIP: [1;32mCPLEX finished.[0m
+MIP: [1;32mCPLEX status: Feasible[0m
+MIP: [1;32mSolution: 
+Indexes: [9, 18, 13, 0, 9, 7, 10, 4, 17, 9, 12, 18, 4, 18, 12, 3, 15, 4, 18, 5, 5, 18, 15, 7, 0, 14, 2, 1, 11, 3][18, 6, 13, 4, 16, 2, -1, 0, -1, 8, 10, 14, 12, 18, 18, 7, -1, 9, 8][13, -1, 8, -1, 6, -1, 1, 12, 7, 16, 20, -1, 16, 21, 4, -1, 19, -1, 11][-1, 3, -1, -1, 7, -1, 2, 5, 2, -1, -1, 10, 10, 1, -1, -1, 14, -1, -1, 19, 19, 15][-1, 20, 19, 15, -1, 4, -1, 4, -1, -1, 9, -1, -1, -1, 9, 6, -1, -1, -1, 20], P Variables: [0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0], Flow leaving each bin: Level: 0, Item: 0 => [0]
+Level: 0, Item: 1 => [1]
+Level: 0, Item: 2 => [2]
+Level: 0, Item: 3 => [3]
+Level: 0, Item: 4 => [4]
+Level: 0, Item: 5 => [5]
+Level: 0, Item: 6 => [6]
+Level: 0, Item: 7 => [7]
+Level: 0, Item: 8 => [8]
+Level: 0, Item: 9 => [9]
+Level: 0, Item: 10 => [10]
+Level: 0, Item: 11 => [11]
+Level: 0, Item: 12 => [12]
+Level: 0, Item: 13 => [13]
+Level: 0, Item: 14 => [14]
+Level: 0, Item: 15 => [15]
+Level: 0, Item: 16 => [16]
+Level: 0, Item: 17 => [17]
+Level: 0, Item: 18 => [18]
+Level: 0, Item: 19 => [19]
+Level: 0, Item: 20 => [20]
+Level: 0, Item: 21 => [21]
+Level: 0, Item: 22 => [22]
+Level: 0, Item: 23 => [23]
+Level: 0, Item: 24 => [24]
+Level: 0, Item: 25 => [25]
+Level: 0, Item: 26 => [26]
+Level: 0, Item: 27 => [27]
+Level: 0, Item: 28 => [28]
+Level: 0, Item: 29 => [29]
+Level: 1, Bin: 0 => [3, 24]
+Level: 1, Bin: 1 => [27]
+Level: 1, Bin: 2 => [26]
+Level: 1, Bin: 3 => [15, 29]
+Level: 1, Bin: 4 => [7, 12, 17]
+Level: 1, Bin: 5 => [19, 20]
+Level: 1, Bin: 7 => [5, 23]
+Level: 1, Bin: 9 => [0, 4, 9]
+Level: 1, Bin: 10 => [6]
+Level: 1, Bin: 11 => [28]
+Level: 1, Bin: 12 => [10, 14]
+Level: 1, Bin: 13 => [2]
+Level: 1, Bin: 14 => [25]
+Level: 1, Bin: 15 => [16, 22]
+Level: 1, Bin: 17 => [8]
+Level: 1, Bin: 18 => [1, 11, 13, 18, 21]
+Level: 2, Bin: 0 => [5, 23]
+Level: 2, Bin: 2 => [19, 20]
+Level: 2, Bin: 4 => [15, 29]
+Level: 2, Bin: 6 => [27]
+Level: 2, Bin: 7 => [16, 22]
+Level: 2, Bin: 8 => [0, 1, 4, 9, 11, 13, 18, 21]
+Level: 2, Bin: 9 => [8]
+Level: 2, Bin: 10 => [6]
+Level: 2, Bin: 12 => [10, 14]
+Level: 2, Bin: 13 => [26]
+Level: 2, Bin: 14 => [28]
+Level: 2, Bin: 16 => [7, 12, 17]
+Level: 2, Bin: 18 => [2, 3, 24, 25]
+Level: 3, Bin: 1 => [27]
+Level: 3, Bin: 4 => [28]
+Level: 3, Bin: 6 => [15, 29]
+Level: 3, Bin: 7 => [0, 1, 4, 9, 11, 13, 18, 21]
+Level: 3, Bin: 8 => [19, 20]
+Level: 3, Bin: 11 => [2, 3, 24, 25]
+Level: 3, Bin: 12 => [16, 22]
+Level: 3, Bin: 13 => [5, 23]
+Level: 3, Bin: 16 => [8, 10, 14]
+Level: 3, Bin: 19 => [7, 12, 17]
+Level: 3, Bin: 20 => [6]
+Level: 3, Bin: 21 => [26]
+Level: 4, Bin: 1 => [5, 23]
+Level: 4, Bin: 2 => [15, 19, 20, 29]
+Level: 4, Bin: 3 => [27]
+Level: 4, Bin: 5 => [0, 1, 4, 9, 11, 13, 18, 21]
+Level: 4, Bin: 7 => [28]
+Level: 4, Bin: 10 => [2, 3, 16, 22, 24, 25]
+Level: 4, Bin: 14 => [8, 10, 14]
+Level: 4, Bin: 15 => [26]
+Level: 4, Bin: 19 => [6, 7, 12, 17]
+Level: 5, Bin: 4 => [0, 1, 4, 9, 11, 13, 18, 21, 28]
+Level: 5, Bin: 6 => [26]
+Level: 5, Bin: 9 => [2, 3, 8, 10, 14, 16, 22, 24, 25]
+Level: 5, Bin: 15 => [27]
+Level: 5, Bin: 19 => [15, 19, 20, 29]
+Level: 5, Bin: 20 => [5, 6, 7, 12, 17, 23]
+[0m
+MIP: [1;32mObjective value: 52334[0m
+MIP: [1;32mLower Bound: 21576.3[0m
+MIP: [1;32mBranch-and-Bound nodes: 0[0m
+
+# best solution:
+best objective value:	52334
+best dual bound value:	21576
+optimality gap:	58.7725%
+CPU time:	897.124

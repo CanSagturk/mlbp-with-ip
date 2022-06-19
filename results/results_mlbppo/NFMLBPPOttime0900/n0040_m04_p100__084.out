@@ -1,0 +1,67 @@
+ifile	/scratch/csagturk/mlbppo_inst/n0040_m04_p100__084.inst
+prob	NFMLBPPO
+threads	1
+ttime	900
+instance: /scratch/csagturk/mlbppo_inst/n0040_m04_p100__084.inst
+	m=4, n=[40, 28, 26, 24, 22], #pos=40
+MIP: [1;32minit CPLEX[0m
+CAN: [1;35mcreated 3000 x_{ijk} variables[0m
+CAN: [1;35mcreated 140 y_{ij} variables[0m
+CAN: [1;35mcreated 5600 f_{ijkh} variables[0m
+MIP: [1;32mcreated decision variables[0m
+CAN: [1;35madded 40 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 78 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 100 capacity constraints[0m
+MIP: [1;32mcreated constraints[0m
+MIP: [1;32mcreated objective function[0m
+MIP: [1;32mcalling CPLEX solve ...[0m
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               900
+Tried aggregator 2 times.
+MIP Presolve eliminated 23002 rows and 23575 columns.
+MIP Presolve modified 2455 coefficients.
+Aggregator did 337 substitutions.
+Reduced MIP has 102501 rows, 100848 columns, and 376866 nonzeros.
+Reduced MIP has 100614 binaries, 0 generals, 0 SOSs, and 153 indicators.
+Presolve time = 0.65 sec. (529.66 ticks)
+Elapsed time = 13.55 sec. (10000.19 ticks) for 22% of probing (782 vars fixed)
+Probing fixed 782 vars, tightened 156 bounds.
+Probing time = 18.63 sec. (13977.41 ticks)
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 2271 rows and 2275 columns.
+MIP Presolve modified 3 coefficients.
+Aggregator did 3 substitutions.
+Reduced MIP has 100230 rows, 98570 columns, and 369796 nonzeros.
+Reduced MIP has 98570 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.79 sec. (606.48 ticks)
+Probing time = 0.08 sec. (35.10 ticks)
+Clique table members: 270299.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 453.63 sec. (379175.33 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0    28549.8586  1658                  28549.8586   166311         
+      0     0    28680.5243  1283                   Cuts: 105   265384         
+
+Clique cuts applied:  45
+Cover cuts applied:  39
+Flow cuts applied:  4
+Mixed integer rounding cuts applied:  38
+Zero-half cuts applied:  40
+Gomory fractional cuts applied:  6
+
+Root node processing (before b&c):
+  Real time             =  900.02 sec. (677263.38 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =  900.02 sec. (677263.38 ticks)
+MIP: [1;32mCPLEX finished.[0m
+MIP: [1;32mCPLEX status: Unknown[0m
+MIP: [1;32mNo feasible solution exits[0m

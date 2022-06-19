@@ -1,0 +1,126 @@
+ifile	/scratch/csagturk/mlbppo_inst/n0010_m03_p100__092.inst
+prob	NFMLBPPO
+threads	1
+ttime	900
+instance: /scratch/csagturk/mlbppo_inst/n0010_m03_p100__092.inst
+	m=3, n=[10, 8, 7, 8], #pos=10
+MIP: [1;32minit CPLEX[0m
+CAN: [1;35mcreated 192 x_{ijk} variables[0m
+CAN: [1;35mcreated 33 y_{ij} variables[0m
+CAN: [1;35mcreated 330 f_{ijkh} variables[0m
+MIP: [1;32mcreated decision variables[0m
+CAN: [1;35madded 10 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 15 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 23 capacity constraints[0m
+MIP: [1;32mcreated constraints[0m
+MIP: [1;32mcreated objective function[0m
+MIP: [1;32mcalling CPLEX solve ...[0m
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               900
+Tried aggregator 2 times.
+MIP Presolve eliminated 406 rows and 429 columns.
+MIP Presolve modified 234 coefficients.
+Aggregator did 67 substitutions.
+Reduced MIP has 1952 rows, 1869 columns, and 6692 nonzeros.
+Reduced MIP has 1824 binaries, 0 generals, 0 SOSs, and 15 indicators.
+Presolve time = 0.01 sec. (9.14 ticks)
+Found incumbent of value 15368.000000 after 0.03 sec. (17.65 ticks)
+Probing fixed 1 vars, tightened 30 bounds.
+Probing changed sense of 79 constraints.
+Probing time = 0.05 sec. (48.31 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 165 rows and 170 columns.
+Reduced MIP has 1787 rows, 1699 columns, and 6286 nonzeros.
+Reduced MIP has 1699 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (7.32 ticks)
+Probing time = 0.00 sec. (3.26 ticks)
+Clique table members: 4575.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.01 sec. (12.39 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                        15368.0000        0.0000           100.00%
+      0     0     6905.2018    83    15368.0000     6905.2018      742   55.07%
+*     0+    0                        10143.0000     6905.2018            31.92%
+      0     0     7109.2684   125    10143.0000      Cuts: 66     1461   29.91%
+      0     0     7144.7540   129    10143.0000      Cuts: 48     2228   29.56%
+      0     0     7179.0338   149    10143.0000      Cuts: 25     2530   29.22%
+      0     0     7190.4938   168    10143.0000      Cuts: 28     2890   29.11%
+      0     0     7190.5120   183    10143.0000       Cuts: 7     2946   29.11%
+*     0+    0                         9650.0000     7190.5120            25.49%
+      0     0  -1.00000e+75     0     9650.0000     7190.5120     2946   25.49%
+Detecting symmetries...
+      0     0     7191.3040   160     9650.0000      Cuts: 10     3070   25.48%
+      0     0     7192.8624   176     9650.0000      Cuts: 16     3625   25.46%
+      0     0     7197.1939   168     9650.0000      Cuts: 14     3799   25.42%
+      0     0     7203.8360   158     9650.0000       Cuts: 6     4014   25.35%
+      0     0     7205.5694   160     9650.0000      Cuts: 18     4094   25.33%
+      0     0     7220.3255   150     9650.0000      Cuts: 24     4484   25.18%
+      0     0     7235.2548   125     9650.0000      Cuts: 14     4606   25.02%
+      0     0     7237.5611   146     9650.0000      Cuts: 12     4716   25.00%
+      0     0     7240.7709   148     9650.0000       Cuts: 8     4787   24.97%
+      0     0     7242.0949   156     9650.0000       Cuts: 8     4845   24.95%
+      0     0     7243.3191   161     9650.0000       Cuts: 6     4871   24.94%
+      0     0     7243.7543   166     9650.0000       Cuts: 4     4928   24.94%
+*     0+    0                         7980.0000     7243.7543             9.23%
+Detecting symmetries...
+      0     2     7243.7543   164     7980.0000     7244.0013     4928    9.22%
+Elapsed time = 1.02 sec. (971.98 ticks, tree = 0.01 MB, solutions = 4)
+*    10+   10                         7874.0000     7283.0592             7.50%
+     14    16     7618.8655   103     7874.0000     7283.0592     9708    7.50%
+     58    40     7425.4545    61     7874.0000     7358.7039    15778    6.54%
+*    59    16      integral     0     7472.0000     7358.7039    16272    1.52%
+     94    11     7423.8020   158     7472.0000     7424.6774    20777    0.63%
+
+Clique cuts applied:  5
+Cover cuts applied:  23
+Flow cuts applied:  4
+Mixed integer rounding cuts applied:  18
+Zero-half cuts applied:  16
+Gomory fractional cuts applied:  2
+
+Root node processing (before b&c):
+  Real time             =    1.01 sec. (960.49 ticks)
+Sequential b&c:
+  Real time             =    0.69 sec. (796.54 ticks)
+                          ------------
+Total (root+branch&cut) =    1.70 sec. (1757.03 ticks)
+MIP: [1;32mCPLEX finished.[0m
+MIP: [1;32mCPLEX status: Optimal[0m
+MIP: [1;32mSolution: 
+Indexes: [3, 1, 3, 3, 2, 5, 2, 7, 5, 1][-1, 1, 0, 0, -1, 5, -1, 5][3, 0, -1, -1, -1, 0, -1], P Variables: [0, 0, 0][0, 0, 0][0, 0, 0][0, 0, 0][0, 0, 0][0, 0, 0][0, 0, 0][0, 0, 0][0, 0, 0][0, 0, 0], Flow leaving each bin: Level: 0, Item: 0 => [0]
+Level: 0, Item: 1 => [1]
+Level: 0, Item: 2 => [2]
+Level: 0, Item: 3 => [3]
+Level: 0, Item: 4 => [4]
+Level: 0, Item: 5 => [5]
+Level: 0, Item: 6 => [6]
+Level: 0, Item: 7 => [7]
+Level: 0, Item: 8 => [8]
+Level: 0, Item: 9 => [9]
+Level: 1, Bin: 1 => [1, 9]
+Level: 1, Bin: 2 => [4, 6]
+Level: 1, Bin: 3 => [0, 2, 3]
+Level: 1, Bin: 5 => [5, 8]
+Level: 1, Bin: 7 => [7]
+Level: 2, Bin: 0 => [0, 2, 3, 4, 6]
+Level: 2, Bin: 1 => [1, 9]
+Level: 2, Bin: 5 => [5, 7, 8]
+Level: 3, Bin: 0 => [1, 5, 7, 8, 9]
+Level: 3, Bin: 3 => [0, 2, 3, 4, 6]
+[0m
+MIP: [1;32mObjective value: 7472[0m
+MIP: [1;32mLower Bound: 7472[0m
+MIP: [1;32mBranch-and-Bound nodes: 117[0m
+
+# best solution:
+best objective value:	7472
+best dual bound value:	7472
+optimality gap:	0%
+CPU time:	1.6863

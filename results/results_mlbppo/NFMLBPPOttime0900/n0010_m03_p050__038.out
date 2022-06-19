@@ -1,0 +1,125 @@
+ifile	/scratch/csagturk/mlbppo_inst/n0010_m03_p050__038.inst
+prob	NFMLBPPO
+threads	1
+ttime	900
+instance: /scratch/csagturk/mlbppo_inst/n0010_m03_p050__038.inst
+	m=3, n=[10, 8, 6, 9], #pos=5
+MIP: [1;32minit CPLEX[0m
+CAN: [1;35mcreated 182 x_{ijk} variables[0m
+CAN: [1;35mcreated 33 y_{ij} variables[0m
+CAN: [1;35mcreated 330 f_{ijkh} variables[0m
+MIP: [1;32mcreated decision variables[0m
+CAN: [1;35madded 10 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 14 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 23 capacity constraints[0m
+MIP: [1;32mcreated constraints[0m
+MIP: [1;32mcreated objective function[0m
+MIP: [1;32mcalling CPLEX solve ...[0m
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               900
+Tried aggregator 2 times.
+MIP Presolve eliminated 210 rows and 231 columns.
+MIP Presolve modified 185 coefficients.
+Aggregator did 88 substitutions.
+Reduced MIP has 1985 rows, 1936 columns, and 6793 nonzeros.
+Reduced MIP has 1894 binaries, 0 generals, 0 SOSs, and 14 indicators.
+Presolve time = 0.01 sec. (9.44 ticks)
+Found incumbent of value 15649.000000 after 0.03 sec. (18.93 ticks)
+Probing fixed 3 vars, tightened 28 bounds.
+Probing changed sense of 88 constraints.
+Probing time = 0.05 sec. (49.63 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 171 rows and 175 columns.
+Reduced MIP has 1814 rows, 1761 columns, and 6363 nonzeros.
+Reduced MIP has 1761 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (8.08 ticks)
+Probing time = 0.00 sec. (3.27 ticks)
+Clique table members: 4650.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.01 sec. (9.94 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                        15649.0000        0.0000           100.00%
+      0     0     5345.0379    48    15649.0000     5345.0379      473   65.84%
+*     0+    0                         7819.0000     5345.0379            31.64%
+      0     0     5575.9386    90     7819.0000      Cuts: 47      856   28.69%
+      0     0     5603.9278   117     7819.0000      Cuts: 54     1432   28.33%
+*     0+    0                         7386.0000     5603.9278            24.13%
+      0     0     5608.2725   119     7386.0000      Cuts: 29     1728   24.07%
+*     0+    0                         7343.0000     5608.2725            23.62%
+      0     0     5616.0043   131     7343.0000      Cuts: 24     2135   23.52%
+      0     0     5623.2761   113     7343.0000      Cuts: 27     2499   23.42%
+*     0+    0                         7224.0000     5623.2761            22.16%
+      0     0  -1.00000e+75     0     7224.0000     5623.2761     2499   22.16%
+      0     0     5626.4715   118     7224.0000      Cuts: 25     2667   22.11%
+      0     0     5630.2331   104     7224.0000      Cuts: 11     2813   22.06%
+      0     0     5630.9475   116     7224.0000       Cuts: 5     2854   22.05%
+      0     0     5653.2341   128     7224.0000       Cuts: 5     2952   21.74%
+      0     0     5666.8898   119     7224.0000      Cuts: 10     3038   21.55%
+      0     0     5673.0559   114     7224.0000       Cuts: 9     3105   21.47%
+      0     0     5677.7453   125     7224.0000      Cuts: 21     3434   21.40%
+      0     0     5680.8894   124     7224.0000      Cuts: 18     3505   21.36%
+*     0+    0                         7091.0000     5680.8894            19.89%
+      0     0     5680.8894   123     7091.0000      Cuts: 19     3543   19.89%
+      0     0     5689.5703   129     7091.0000    MIRcuts: 3     3612   19.76%
+      0     0     5691.3575   124     7091.0000       Cuts: 9     3653   19.74%
+      0     0     5702.2794   128     7091.0000       Cuts: 7     3703   19.58%
+      0     0     5702.2794   137     7091.0000      Cuts: 11     3888   19.58%
+*     0+    0                         7066.0000     5702.2794            19.30%
+*     0+    0                         6977.0000     5702.2794            18.27%
+      0     2     5702.2794   111     6977.0000     5706.6771     3888   18.21%
+Elapsed time = 0.68 sec. (598.41 ticks, tree = 0.01 MB, solutions = 8)
+*     4     4      integral     0     5845.0000     5737.4706     5427    1.84%
+
+Clique cuts applied:  1
+Cover cuts applied:  23
+Flow cuts applied:  1
+Mixed integer rounding cuts applied:  17
+Zero-half cuts applied:  7
+Lift and project cuts applied:  2
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    0.68 sec. (598.54 ticks)
+Sequential b&c:
+  Real time             =    0.19 sec. (210.75 ticks)
+                          ------------
+Total (root+branch&cut) =    0.87 sec. (809.29 ticks)
+MIP: [1;32mCPLEX finished.[0m
+MIP: [1;32mCPLEX status: Optimal[0m
+MIP: [1;32mSolution: 
+Indexes: [4, 1, 3, 6, 6, 4, 2, 3, 0, 4][2, 0, 2, 0, 0, -1, 2, -1][5, -1, 5, -1, -1, -1], P Variables: [0, 0, 0][0, 0, 0][0, 0, 0][0, 0, 0][0, 0, 0][0, 0, 0][0, 0, 0][0, 0, 0][0, 0, 0][0, 0, 0], Flow leaving each bin: Level: 0, Item: 0 => [0]
+Level: 0, Item: 1 => [1]
+Level: 0, Item: 2 => [2]
+Level: 0, Item: 3 => [3]
+Level: 0, Item: 4 => [4]
+Level: 0, Item: 5 => [5]
+Level: 0, Item: 6 => [6]
+Level: 0, Item: 7 => [7]
+Level: 0, Item: 8 => [8]
+Level: 0, Item: 9 => [9]
+Level: 1, Bin: 0 => [8]
+Level: 1, Bin: 1 => [1]
+Level: 1, Bin: 2 => [6]
+Level: 1, Bin: 3 => [2, 7]
+Level: 1, Bin: 4 => [0, 5, 9]
+Level: 1, Bin: 6 => [3, 4]
+Level: 2, Bin: 0 => [0, 1, 2, 5, 7, 9]
+Level: 2, Bin: 2 => [3, 4, 6, 8]
+Level: 3, Bin: 5 => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[0m
+MIP: [1;32mObjective value: 5845[0m
+MIP: [1;32mLower Bound: 5845[0m
+MIP: [1;32mBranch-and-Bound nodes: 60[0m
+
+# best solution:
+best objective value:	5845
+best dual bound value:	5845
+optimality gap:	0%
+CPU time:	0.859994

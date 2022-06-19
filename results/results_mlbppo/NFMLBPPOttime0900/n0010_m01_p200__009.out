@@ -1,0 +1,101 @@
+ifile	/scratch/csagturk/mlbppo_inst/n0010_m01_p200__009.inst
+prob	NFMLBPPO
+threads	1
+ttime	900
+instance: /scratch/csagturk/mlbppo_inst/n0010_m01_p200__009.inst
+	m=1, n=[10, 10], #pos=20
+MIP: [1;32minit CPLEX[0m
+CAN: [1;35mcreated 100 x_{ijk} variables[0m
+CAN: [1;35mcreated 20 y_{ij} variables[0m
+CAN: [1;35mcreated 200 f_{ijkh} variables[0m
+MIP: [1;32mcreated decision variables[0m
+CAN: [1;35madded 10 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 0 constraints to enforce the packing of each item[0m
+CAN: [1;35madded 10 capacity constraints[0m
+MIP: [1;32mcreated constraints[0m
+MIP: [1;32mcreated objective function[0m
+MIP: [1;32mcalling CPLEX solve ...[0m
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               900
+Tried aggregator 3 times.
+MIP Presolve eliminated 359 rows and 352 columns.
+MIP Presolve modified 357 coefficients.
+Aggregator did 13 substitutions.
+Reduced MIP has 951 rows, 845 columns, and 3940 nonzeros.
+Reduced MIP has 845 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (5.47 ticks)
+Found incumbent of value 3482.000000 after 0.02 sec. (9.73 ticks)
+Probing fixed 792 vars, tightened 0 bounds.
+Probing changed sense of 26 constraints.
+Probing time = 0.00 sec. (2.94 ticks)
+Cover probing fixed 0 vars, tightened 20 bounds.
+Tried aggregator 2 times.
+MIP Presolve eliminated 945 rows and 832 columns.
+MIP Presolve added 5 rows and 1 columns.
+MIP Presolve modified 18 coefficients.
+Aggregator did 4 substitutions.
+Reduced MIP has 7 rows, 10 columns, and 19 nonzeros.
+Reduced MIP has 9 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.19 ticks)
+Probing fixed 0 vars, tightened 1 bounds.
+Probing time = 0.00 sec. (0.01 ticks)
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 1 rows and 2 columns.
+MIP Presolve added 1 rows and 1 columns.
+Aggregator did 1 substitutions.
+Reduced MIP has 6 rows, 8 columns, and 16 nonzeros.
+Reduced MIP has 7 binaries, 1 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.03 ticks)
+Probing time = 0.00 sec. (0.00 ticks)
+Clique table members: 7.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.01 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                         3482.0000     2000.0000            42.56%
+      0     0     2700.0000     4     3482.0000     2700.0000        4   22.46%
+*     0+    0                         2800.0000     2700.0000             3.57%
+      0     0        cutoff           2800.0000                      4    0.00%
+Elapsed time = 0.03 sec. (14.32 ticks, tree = 0.01 MB, solutions = 2)
+
+Root node processing (before b&c):
+  Real time             =    0.03 sec. (14.36 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.03 sec. (14.36 ticks)
+MIP: [1;32mCPLEX finished.[0m
+MIP: [1;32mCPLEX status: Optimal[0m
+MIP: [1;32mSolution: 
+Indexes: [6, 0, 5, 6, 4, 8, 8, 1, 1, 4], P Variables: [0][0][0][0][0][0][0][0][0][0], Flow leaving each bin: Level: 0, Item: 0 => [0]
+Level: 0, Item: 1 => [1]
+Level: 0, Item: 2 => [2]
+Level: 0, Item: 3 => [3]
+Level: 0, Item: 4 => [4]
+Level: 0, Item: 5 => [5]
+Level: 0, Item: 6 => [6]
+Level: 0, Item: 7 => [7]
+Level: 0, Item: 8 => [8]
+Level: 0, Item: 9 => [9]
+Level: 1, Bin: 0 => [1]
+Level: 1, Bin: 1 => [7, 8]
+Level: 1, Bin: 4 => [4, 9]
+Level: 1, Bin: 5 => [2]
+Level: 1, Bin: 6 => [0, 3]
+Level: 1, Bin: 8 => [5, 6]
+[0m
+MIP: [1;32mObjective value: 2800[0m
+MIP: [1;32mLower Bound: 2800[0m
+MIP: [1;32mBranch-and-Bound nodes: 0[0m
+
+# best solution:
+best objective value:	2800
+best dual bound value:	2800
+optimality gap:	0%
+CPU time:	0.0311108
